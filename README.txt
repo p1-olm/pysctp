@@ -3,12 +3,36 @@ PySCTP - SCTP bindings for Python
 
 Elvis Pfützenreuter 
 Instituto Nokia de Tecnologia (http://www.indt.org.br)
-epx@epx.com.br
+epx __AT__ epx.com.br
 
 Philippe Langlois
 P1 Security (http://www.p1sec.com)
-Phil __AT__ p1sec.com
+phil __AT__ p1sec.com
 
+======================================================================
+INSTALL
+
+sudo python setup.py install
+
+* to see what this is going to install without actually doing it:
+python setup.py install --dry-run
+
+* to just build and not install:
+python setup.py build
+
+======================================================================
+DEPENDENCIES:
+
+You can use to automatically install dependencies for Debian/Ubuntu:
+make installdeps
+
+For Mac OSX (Montain lion OSX 10.8):
+https://nplab.fh-muenster.de/groups/wiki/wiki/f366c/SCTP_on_Mountain_Lion.html
+
+Mac OSX SCTP Network Kernel Extension (NKE) available at:
+http://sctp.fh-muenster.de/sctp-nke.html
+
+======================================================================
 INTRODUCTION
 
 PySCTP gives access to the SCTP transport protocol from Python language.
@@ -50,17 +74,7 @@ WARNING: the API of this module is not stable yet. We expect not to
 change it too much, but do not base any critical work on it yet :)
 
 
-INSTALL
-
-sudo python setup.py install
-
-to see what this is going to install without actually doing it:
-python setup.py install --dry-run
-
-to just build and not install:
-python setup.py build
-
-
+======================================================================
 DESCRIPTION
 
 1) The "sctp" module
@@ -106,12 +120,15 @@ NOTE: it all has been tested agains lksctp-utils 1.0.1 and kernel
 2.6.10, that come with Ubuntu Hoary. Some newer calls like connectx()
 depend of testing on a newer environment to be implemented.
 
-3) License
+
+======================================================================
+License
 
 This module is licensed under the LGPL license.
 
-4) Credits
+======================================================================
+Credits
 
-Elvis Pfützenreuter <elvis.pfutzenreuter@indt.org.br>
-Casimiro Daniel NPRI <CasimiroD@npt.nuwc.navy.mil> - patch for new SCTP_* constants
-Philippe Langlois <Phil __AT__ p1sec.com> - patch for Mac OS X support, Python distutils packaging, GIT open repository
+Elvis Pfützenreuter <elvis.pfutzenreuter __AT__ indt.org.br>
+Philippe Langlois <phil __AT__ p1sec.com>
+Casimiro Daniel NPRI <CasimiroD  __AT__ npt.nuwc.navy.mil> - patch for new SCTP_* constants
